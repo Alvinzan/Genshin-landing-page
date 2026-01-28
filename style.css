@@ -1,0 +1,448 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background: #000;
+    color: #fff;
+}
+
+/* HERO IKLAN */
+.ad-hero {
+    height: 100vh;
+    background: url("https://upload-os-bbs.hoyolab.com/upload/2025/10/09/a817a610e47856a84e9bafd2150c1eff_7051288736564660120.jpg") center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.8),
+            rgba(0, 0, 0, 0.35));
+}
+
+.ad-content {
+    position: relative;
+    text-align: center;
+    max-width: 900px;
+    padding: 20px;
+}
+
+.logo {
+    width: 420px;
+    max-width: 90%;
+    margin-bottom: 30px;
+    filter: drop-shadow(0 10px 30px rgba(255, 255, 255, 1));
+}
+
+.ad-content h1 {
+    font-size: 46px;
+    margin-bottom: 15px;
+}
+
+.sub {
+    color: #c7d2fe;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+/* CTA BUTTON */
+.cta-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #3b82f6, #22d3ee);
+    padding: 18px 48px;
+    border-radius: 50px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: transform 0.3s ease;
+}
+
+.cta-btn:hover {
+    transform: scale(1.1);
+}
+
+.big {
+    font-size: 20px;
+}
+
+.cta-btn {
+    box-shadow: 0 0 40px rgba(56, 189, 248, 0.6);
+}
+
+/* ===== COLUMBINA SPLIT LAYOUT ===== */
+
+.columbina-reveal {
+    height: 110vh;
+    position: relative;
+    overflow: hidden;
+
+    background-image: url("https://upload-os-bbs.hoyolab.com/upload/2026/01/09/ad848d099bfffbfec56c1d4fae228b40_5175037836164009182.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.columbina-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right,
+            rgba(0, 0, 0, 0.9),
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.1));
+    z-index: 1;
+}
+
+
+.columbina-container {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    align-items: center;
+}
+
+/* TEKS KIRI */
+.columbina-text h2 {
+    font-size: 72px;
+    margin: 25px 0;
+    letter-spacing: 6px;
+
+    background: linear-gradient(180deg, #ffffff, #93c5fd);
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    filter: drop-shadow(0 1px 40px rgba(255, 255, 255, 1));
+}
+
+.columbina-text {
+    padding: 80px;
+}
+
+.columbina-text .label {
+    font-size: 14px;
+    letter-spacing: 4px;
+    color: #93c5fd;
+}
+
+.columbina-text h2 {
+    font-size: 72px;
+    margin: 25px 0;
+    letter-spacing: 6px;
+    text-shadow: 0 50px 70px rgba(0, 0, 0, 0.9);
+}
+
+.columbina-text .quote {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #ffffff;
+    margin-bottom: 45px;
+}
+
+.columbina-info {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.columbina-info span {
+    padding: 12px 26px;
+    border-radius: 30px;
+    background: rgba(2, 6, 23, 0.85);
+    border: 1px solid #1e293b;
+    font-weight: bold;
+}
+
+/* GAMBAR KANAN */
+.columbina-image {
+    height: 100%;
+    background: url("https://64.media.tumblr.com/ef093757fca2a81c77ae1b9364a129f2/3469ee7d5fdc3e6a-0f/s2048x3072/332e2699e8d3645eb52a1573fe9b3c189baa0066.pnj") right center/ 120% no-repeat;
+    transform: scale(1.05);
+    filter: drop-shadow(0 40px 80px rgba(255, 255, 255, 0.8));
+}
+
+.columbina-image {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .columbina-container {
+        grid-template-columns: 1fr;
+    }
+
+    .columbina-image {
+        height: 45vh;
+        background-position: center top;
+    }
+
+    .columbina-text {
+        padding: 50px 30px;
+        text-align: center;
+    }
+
+    .columbina-info {
+        justify-content: center;
+    }
+}
+
+
+/* HIGHLIGHTS */
+.highlights {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 25px 20px;
+    background: #1a1d28;
+    flex-wrap: wrap;
+}
+
+.highlight {
+    padding: 10px 18px;
+    border-radius: 30px;
+    background: #020617;
+    border: 1px solid #155cce;
+    font-weight: bold;
+}
+
+/* CTA AKHIR */
+.final-cta {
+    position: relative;
+    background: url("https://upload-os-bbs.hoyolab.com/upload/2025/07/23/360213345/a53b69ffd2661289aebec22319e2f70b_179436698968779135.webp") center/cover no-repeat;
+    text-align: center;
+    padding: 110px 20px;
+    overflow: hidden;
+}
+
+.final-cta h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 1px 30px rgb(255, 255, 255));
+}
+
+.final-cta p {
+    margin-bottom: 35px;
+}
+
+.cta-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.35),
+            rgba(0, 0, 0, 0.1));
+    z-index: 1;
+}
+
+.final-cta h2,
+.final-cta p,
+.final-cta a {
+    position: relative;
+    z-index: 2;
+}
+
+/* FOOTER */
+footer {
+    background: #1a1d28;
+    text-align: center;
+    padding: 15px;
+    font-size: 13px;
+    color: #94a3b8;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .ad-content h1 {
+        font-size: 32px;
+    }
+
+    .character-content h3 {
+        font-size: 42px;
+    }
+
+    .logo {
+        width: 300px;
+    }
+}
+
+/* ===== TOP UP PROMO ===== */
+.topup-promo {
+    position: relative;
+    min-height: 100vh;
+    background: url("https://pbs.twimg.com/media/G_VUw4kb0AAvXUG?format=jpg&name=4096x4096") center/cover no-repeat;
+    overflow: hidden;
+}
+
+.topup-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right,
+            rgba(2, 6, 23, 0.95),
+            rgba(2, 6, 23, 0.6) 45%,
+            rgba(0, 0, 0, 0.3) 55%,
+            rgba(0, 0, 0, 0.1) 70%);
+
+    z-index: 1;
+}
+
+.topup-container {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 100px;
+    gap: 60px;
+}
+
+/* TEKS */
+.topup-text .tag {
+    font-size: 13px;
+    letter-spacing: 4px;
+    color: #facc15;
+}
+
+.topup-text h2 {
+    font-size: 64px;
+    margin: 25px 0;
+    letter-spacing: 6px;
+    filter: drop-shadow(0 10px 30px rgba(255, 255, 255, 1));
+}
+
+.topup-text .desc {
+    font-size: 20px;
+    line-height: 1.7;
+    color: #e5e7eb;
+    max-width: 520px;
+    margin-bottom: 45px;
+}
+
+/* BENEFIT CHIP */
+.topup-benefit {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 55px;
+}
+
+.topup-benefit span {
+    padding: 12px 26px;
+    border-radius: 30px;
+    background: rgba(2, 6, 23, .85);
+    border: 1px solid #334155;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* ===== GENESIS CRYSTAL LIST ===== */
+.crystal-list {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.crystal-card {
+    background: rgba(2, 6, 23, .9);
+    border: 1px solid #334155;
+    border-radius: 22px;
+    padding: 30px 25px;
+    width: 220px;
+    text-align: center;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, .55);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.crystal-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 40px 80px rgba(0, 0, 0, .8);
+}
+
+.crystal-card img {
+    width: 80px;
+    margin-bottom: 15px;
+}
+
+.crystal-card h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.price {
+    margin-bottom: 10px;
+}
+
+.price .old {
+    text-decoration: line-through;
+    color: #94a3b8;
+    font-size: 14px;
+    margin-right: 6px;
+}
+
+.price .new {
+    font-size: 18px;
+    font-weight: bold;
+    color: #facc15;
+}
+
+.bonus {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    background: rgba(250, 204, 21, .15);
+    color: #fde047;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+/* PAKET REKOMENDASI */
+.crystal-card.highlight {
+    border-color: #facc15;
+    box-shadow: 0 0 40px rgba(250, 204, 21, .4);
+    transform: scale(1.05);
+}
+
+/* GAMBAR */
+.topup-image {
+    height: 85%;
+    background: linear-gradient(to left,
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.85)),
+        url("https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Columbina_Portrait.png") center/contain no-repeat;
+}
+
+/* CTA GLOW */
+.cta-btn.glow {
+    box-shadow: 0 0 25px rgba(250, 204, 21, .45),
+        0 0 60px rgba(250, 204, 21, .25);
+}
